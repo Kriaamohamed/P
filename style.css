@@ -1,0 +1,133 @@
+/* الألوان والمتغيرات */
+:root {
+    --primary: #38bdf8;
+    --secondary: #a855f7;
+    --accent: #22c55e;
+    --bg-dark: #020617;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text: #f8fafc;
+}
+
+/* التنسيق العام */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Cairo', sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* الخلفية المتحركة */
+#particles-js {
+    position: fixed; width: 100%; height: 100%; z-index: -1;
+    background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+}
+
+/* شاشة التحميل */
+#loader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--bg-dark); display: flex; flex-direction: column;
+    justify-content: center; align-items: center; z-index: 9999;
+    transition: 0.5s;
+}
+.spinner {
+    width: 50px; height: 50px; border: 5px solid var(--glass);
+    border-top-color: var(--primary); border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* الهيدر الزجاجي */
+.glass-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 5%; background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border);
+    position: sticky; top: 0; z-index: 1000;
+}
+
+.logo-text { font-family: 'Orbitron'; font-weight: 900; color: #fff; }
+.logo-text span { color: var(--primary); }
+
+.nav-link {
+    background: none; border: none; color: #94a3b8; padding: 10px 20px;
+    cursor: pointer; font-family: 'Cairo'; transition: 0.3s; font-weight: bold;
+}
+.nav-link.active { color: var(--primary); border-bottom: 2px solid var(--primary); }
+
+/* قسم الهيرو */
+.hero-content {
+    height: 90vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center; padding: 20px;
+}
+.badge {
+    background: var(--glass); padding: 5px 15px; border-radius: 20px;
+    font-size: 0.8rem; border: 1px solid var(--primary); margin-bottom: 20px;
+}
+.glitch {
+    font-size: 3.5rem; font-weight: 900; font-family: 'Orbitron';
+    background: linear-gradient(to right, #fff, var(--primary));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.main-btn {
+    padding: 15px 35px; background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border: none; border-radius: 12px; color: #fff; font-weight: bold;
+    cursor: pointer; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* الكروت المتطورة */
+.grid-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; padding: 20px 5%;
+}
+
+.service-card {
+    background: var(--glass); border: 1px solid var(--glass-border);
+    padding: 30px; border-radius: 24px; position: relative;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+.service-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.08); border-color: var(--primary); }
+
+.card-tag {
+    position: absolute; top: 15px; right: -30px; background: var(--secondary);
+    color: #fff; padding: 5px 40px; transform: rotate(45deg); font-size: 0.7rem; font-weight: bold;
+}
+
+.price-tag { font-size: 3rem; font-weight: 900; margin: 20px 0; color: var(--primary); }
+.price-tag span { font-size: 1rem; color: #94a3b8; }
+
+.features { list-style: none; text-align: right; margin-bottom: 25px; }
+.features li { margin: 10px 0; font-size: 0.9rem; color: #cbd5e1; }
+.features i { color: var(--accent); margin-left: 10px; }
+
+.buy-now {
+    width: 100%; padding: 12px; border-radius: 12px; border: none;
+    background: #fff; color: #000; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.buy-now:hover { background: var(--primary); color: #fff; }
+
+/* الموبايل نافيجشن */
+.mobile-nav {
+    display: none; position: fixed; bottom: 0; width: 100%;
+    background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border); justify-content: space-around;
+    padding: 10px 0; z-index: 2000;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav { display: none; }
+    .mobile-nav { display: flex; }
+    .glitch { font-size: 2rem; }
+    .hero-content { height: 80vh; }
+}
+
+/* اللمس - Touch Feedback */
+button:active { transform: scale(0.95); opacity: 0.8; }
