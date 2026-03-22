@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kriaa Elite | وكالة كريعة للخدمات الرقمية</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Orbitron:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div id="loader">
+    <div class="spinner"></div>
+    <p>جاري تحميل التجربة...</p>
+</div>
+
+<header class="glass-header">
+    <div class="logo-area">
+        <span class="logo-icon">🚀</span>
+        <h2 class="logo-text">KRIAA<span>360</span></h2>
+    </div>
+    <nav class="desktop-nav">
+        <button onclick="show('home')" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</button>
+        <button onclick="show('social')" class="nav-link"><i class="fas fa-chart-line"></i> الخدمات</button>
+        <button onclick="show('thumb')" class="nav-link"><i class="fas fa-paint-brush"></i> تصاميم</button>
+        <button onclick="show('faq')" class="nav-link"><i class="fas fa-question-circle"></i> الأسئلة</button>
+    </nav>
+</header>
+
+<main class="content-wrapper">
+
+    <section id="home" class="page active">
+        <div class="hero-content">
+            <div class="badge">نحن نغير قواعد اللعبة 🔥</div>
+            <h1 class="glitch" data-text="سيطر على السوشيال ميديا">سيطر على السوشيال ميديا</h1>
+            <p class="hero-p">نحن لا نبيع متابعين فقط، نحن نبني لك إمبراطورية رقمية بضمان تونس 100%.</p>
+            <div class="hero-btns">
+                <button class="main-btn" onclick="show('social')">اكتشف خدماتنا <i class="fas fa-arrow-left"></i></button>
+                <button class="alt-btn" onclick="whatsapp()">تواصل مباشر <i class="fab fa-whatsapp"></i></button>
+            </div>
+            <div class="stats-bar">
+                <div class="stat"><span class="num">+10K</span><span class="lab">عميل سعيد</span></div>
+                <div class="stat"><span class="num">+50K</span><span class="lab">طلب مكتمل</span></div>
+                <div class="stat"><span class="num">24/7</span><span class="lab">دعم فني</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="social" class="page">
+        <div class="section-title">
+            <h2>قائمة الخدمات المميزة</h2>
+            <p>اختر المنصة التي تريد السيطرة عليها اليوم</p>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="tab-btn active" data-filter="all">الكل</button>
+            <button class="tab-btn" data-filter="insta">Instagram</button>
+            <button class="tab-btn" data-filter="tiktok">TikTok</button>
+            <button class="tab-btn" data-filter="yt">YouTube</button>
+        </div>
+
+        <div class="grid-container">
+            <div class="service-card insta" data-aos="fade-up">
+                <div class="card-tag">الأكثر طلباً</div>
+                <div class="icon-box"><i class="fab fa-instagram"></i></div>
+                <h3>Instagram Followers</h3>
+                <div class="price-tag">10<span>DT</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 1000 متابع حقيقي</li>
+                    <li><i class="fas fa-check"></i> ضمان عدم النقص</li>
+                    <li><i class="fas fa-bolt"></i> تسليم سريع جداً</li>
+                </ul>
+                <button class="buy-now" onclick="order('1000 Insta Followers')">اطلب الآن</button>
+            </div>
+
+            <div class="service-card tiktok">
+                <div class="icon-box"><i class="fab fa-tiktok"></i></div>
+                <h3>TikTok Followers</h3>
+                <div class="price-tag">15<span>DT</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 1000 متابع عربي/أجنبي</li>
+                    <li><i class="fas fa-check"></i> تفعيل ميزة البث المباشر</li>
+                    <li><i class="fas fa-bolt"></i> آمن تماماً على الحساب</li>
+                </ul>
+                <button class="buy-now" onclick="order('1000 TikTok Followers')">اطلب الآن</button>
+            </div>
+
+            <div class="service-card yt">
+                <div class="icon-box"><i class="fab fa-youtube"></i></div>
+                <h3>YouTube Subscribers</h3>
+                <div class="price-tag">20<span>DT</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 1000 مشترك دائم</li>
+                    <li><i class="fas fa-check"></i> يساعد في تفعيل الربح</li>
+                    <li><i class="fas fa-bolt"></i> دعم فني مخصص</li>
+                </ul>
+                <button class="buy-now" onclick="order('1000 YouTube Subs')">اطلب الآن</button>
+            </div>
+
+            <div class="service-card tiktok">
+                <div class="card-tag gold">عرض خاص</div>
+                <div class="icon-box"><i class="fas fa-eye"></i></div>
+                <h3>TikTok Views</h3>
+                <div class="price-tag">1<span>DT</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 1000 مشاهدة فورية</li>
+                    <li><i class="fas fa-check"></i> ترفع ريتش الفيديو</li>
+                    <li><i class="fas fa-bolt"></i> أرخص سعر في تونس</li>
+                </ul>
+                <button class="buy-now" onclick="order('1000 TikTok Views')">اطلب الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="page">
+        <div class="section-title"><h2>الأسئلة الشائعة</h2></div>
+        <div class="faq-container">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">هل الخدمات آمنة على حسابي؟ <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">نعم 100%، نحن نستخدم طرقاً طبيعية لا تخالف شروط المنصات ولا نطلب كلمة السر أبداً.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">متى يبدأ تنفيذ الطلب؟ <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">يبدأ التنفيذ فور تأكيد الدفع، وعادة ما يستغرق من 5 دقائق إلى ساعتين كحد أقصى.</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<nav class="mobile-nav">
+    <button onclick="show('home')"><i class="fas fa-home"></i><span>الرئيسية</span></button>
+    <button onclick="show('social')"><i class="fas fa-th-large"></i><span>الخدمات</span></button>
+    <button onclick="show('thumb')"><i class="fas fa-image"></i><span>تصاميم</span></button>
+    <button onclick="whatsapp()"><i class="fab fa-whatsapp"></i><span>دعم</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
